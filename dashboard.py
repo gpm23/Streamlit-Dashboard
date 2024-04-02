@@ -10,9 +10,9 @@ from io import BytesIO
 
 
 #Connect to dashboard to AWS buckets
-ACCESS_ID = 'AKIAVQGGLONP2B366WES'
-SECRET_KEY = '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'
-BUCKET_NAME = 'velo-copilot-pitt-capstone'
+ACCESS_ID = os.environ.get('ACCESS_ID')
+SECRET_KEY = os.environ.get('SECRET_KEY')
+BUCKET_NAME = os.environ.get('BUCKET_NAME')
 
 s3 = boto3.client('s3', aws_access_key_id=ACCESS_ID, aws_secret_access_key=SECRET_KEY)
 
